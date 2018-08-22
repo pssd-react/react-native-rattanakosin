@@ -2,7 +2,11 @@ import React, {Component} from 'react'
 import { Button, View, Text } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { createMaterialTopTabNavigator } from 'react-navigation'
-import {HomeScreen, ProfileScreen, MapScreen, FlashSaleScreen, TripScreen} from './../components/screens'
+import MapScreen from './../components/screens/MapScreen'
+import HomeScreen from './../components/screens/HomeScreen'
+import ProfileScreen from './../components/screens/ProfileScreen'
+import FlashSaleScreen from './../components/screens/FlashSaleScreen'
+import TripScreen from './../components/screens/TripScreen'
 
 const AppBottomNavigator = createMaterialTopTabNavigator(
     {

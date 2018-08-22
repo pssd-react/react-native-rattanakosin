@@ -4,7 +4,7 @@ import {
     Text, 
     StyleSheet} from 'react-native'
 
-export class TripScreen extends Component{
+class TripScreen extends Component{
     render(){
         return (
             <View style={styles.container}>
@@ -21,3 +21,5 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     }
 })
+
+export default TripScreen
