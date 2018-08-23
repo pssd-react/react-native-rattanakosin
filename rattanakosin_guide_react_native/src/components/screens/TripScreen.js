@@ -2,13 +2,43 @@ import React, {Component} from 'react'
 import {
     View,
     Text, 
-    StyleSheet} from 'react-native'
+    StyleSheet,
+    Dimensions
+} from 'react-native'
+import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
+import { Header } from '../common'
+import { Exclusive,Interesting,Tripme } from './tripscreens'    
+    
 
-class TripScreen extends Component{
+
+export class TripScreen extends Component{
+
+    state = {
+        index: 0,
+        routes: [
+          { key: 'first', title: 'ทริปที่น่าสนใจ' },
+          { key: 'second', title: 'Exclusive'},
+          { key: 'third', title: 'ทริปของฉัน'},
+        ],
+        
+      };
+
+
+
     render(){
         return (
             <View style={styles.container}>
-                <Text>Trip</Text>
+                <Header headerText= 'ทริป' />
+                <TabView
+                    navigationState={this.state}
+                    renderScene={SceneMap({
+                        first: Interesting,
+                        second: Exclusive,
+                        third: Tripme
+                    })}
+                    onIndexChange={index => this.setState({ index })}
+                    initialLayout={{ width: Dimensions.get('window').width }}
+                />
             </View>
         )
     }
@@ -17,8 +47,7 @@ class TripScreen extends Component{
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        alignItems:'center',
-        justifyContent:'center'
+       
     }
 })
 
