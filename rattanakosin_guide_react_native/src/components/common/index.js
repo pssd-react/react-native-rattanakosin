@@ -11,3 +11,6 @@ export * from './ButtonLogin';
 export * from './SignButton';
 export * from './ButtonFollow';
 export * from './LabelInput';
+export * from './ButtonTrip';
+export * from './TripImg';
+

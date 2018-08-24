@@ -2,19 +2,28 @@ import React, {Component} from 'react'
 import {
     View,
     Text, 
-    StyleSheet} from 'react-native'
-
+    StyleSheet,
+    Image
+} from 'react-native'
+import { Card , CardSection, TripImg } from '../../common'
 export class Exclusive extends Component{
   
 
-    render(){
-        return (
-            
-            <View style={styles.container}>
-                <Text>Exclusive</Text>
-            </View>
-        )
-    }
+        render(){
+            return (
+                <Card style = {styles.container}>
+                    <CardSection>
+                        <View >
+                            <TripImg />
+                        </View>
+                    </CardSection>
+                    <View style={styles.container}>
+                        <Text style={styles.text} >Comming Soon </Text>
+                    </View>
+                </Card>
+                
+            )
+        }
 }
 
 const styles = StyleSheet.create({
@@ -23,13 +32,11 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         backgroundColor: 'white',
-        padding: 20,
     },
     text:{
         textAlign:'center',
-        backgroundColor: '#d35400'
-    },
-    
+        fontSize : 20
+    }
 })
 
 
