@@ -54,6 +54,7 @@ export class FlashSaleScreen extends Component{
                     })}
                     onIndexChange={index => this.setState({ index })}
                     initialLayout={{ width: Dimensions.get('window').width }}
+                    swipeEnabled={false}
                 />
             </View>
         )
